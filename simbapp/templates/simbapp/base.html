@@ -15,27 +15,27 @@
 
   <div class="container-fluid bg-dark text-light mb-5">
     <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'home-page' %}">Code Nation</a>
+      <nav class="navbar navbar-expand-lg p-0 navbar-dark bg-dark">
+        <div class="container-fluid p-4">
+          <a class="navbar-brand" href="{% url 'home-page' %}">CODE NATION</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="{% url 'home-page' %}">Home</a>
+            <ul class="navbar-nav me-auto mb-2 ms-5 mb-lg-0">
+              <li class="nav-item ms-3">
+                <a class="nav-link" href="{% url 'home-page' %}">Home</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item ms-3">
                 <a class="nav-link" href="{% url 'about-page' %}">About</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item ms-3">
                 <a class="nav-link" href="{% url 'contact-page' %}">Contact</a>
               </li>
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-info" type="submit">Search</button>
+              <button class="btn btn-outline-warning" id="searchBtn" type="submit">Search</button>
             </form>
           </div>
         </div>
