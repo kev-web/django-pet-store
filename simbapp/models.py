@@ -5,6 +5,7 @@ from django.db import models
 
 class CodingPics(models.Model):
     name = models.CharField(max_length=50)
+    quantity = models.IntegerField()
     picture = models.ImageField(upload_to='cool_coding_images')
 
     class Meta: 

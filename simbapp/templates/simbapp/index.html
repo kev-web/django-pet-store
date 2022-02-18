@@ -7,7 +7,7 @@
    <div class="container mb-5">
       <div class="row align-items-center">
          <div class="col-sm-6 p-0">
-            <img src="{% static 'simbapp/img/main-image.jpg' %}" alt="" class="img-fluid">
+            <img src="{% static 'simbapp/img/main-image.jpg' %}" alt="index main image" class="img-fluid">
          </div>
          <div class="col-sm-6 p-5">
             <h1 class="display-1 mb-4">CODE NATION</h1>
@@ -29,6 +29,7 @@
                <div class="container">
                   <img src="{{ item.picture.url }}" class="img-fluid">
                   <p class="lead p-2">{{ item.name }}</p>
+                  <p class="lead p-2 border">{{ item.quantity }}</p>
                </div>
             </div>
          {% endfor %}

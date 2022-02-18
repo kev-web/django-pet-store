@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+#These 2 imports are used in Development ONLY to 'serve' media and static files.
+#By default, Django includes the app "django.contrib.staticfiles", which serves your static files from each app (no need for these imports), but
+#if you wanted to 'serve' media files (uploaded images/files by users), you need to use these imports, and bottom code (media part only).
+#If we where to DELETE "django.contrib.staticfiles" app in settings.py, we NEED these 2 imports in order to serve media & static files.
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -24,5 +28,9 @@ urlpatterns = [
     path('', include('simbapp.urls')),
 ]
 
+#We add this if we want to serve media/static in development.
+#If 'django.contrib.staticfiles' app is NOT deleted in settings.py, then we only need to add the 'media' part.
+#If 'django.contrib.staticfiles' app IS deleted, we need both, media and static code shown below.
 if settings.DEBUG: 
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    #urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
