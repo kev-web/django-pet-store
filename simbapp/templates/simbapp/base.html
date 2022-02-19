@@ -35,7 +35,8 @@
                 <a class="nav-link" href="{% url 'contact-page' %}">Contact</a>
               </li>
             </ul>
-            <form class="d-flex">
+            <form class="d-flex" method="get">
+              {% csrf_token %}
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-dark" id="searchBtn" type="submit">Search</button>
             </form>
