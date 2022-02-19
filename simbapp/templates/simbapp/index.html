@@ -28,8 +28,9 @@
             <div class="col-sm-3 mb-3 p-0">
                <div class="container">
                   <img src="{{ item.picture.url }}" class="img-fluid">
-                  <p class="lead p-2">{{ item.name }}</p>
-                  <p class="lead p-2 border">{{ item.quantity }}</p>
+                  <p class="lead p-2 border mb-0">Id: {{ item.id }}</p>
+                  <p class="lead p-2 border mb-0">Name: {{ item.name }}</p>
+                  <p class="lead p-2 border mb-0">Quantity: {{ item.quantity }}</p>
                </div>
             </div>
          {% endfor %}
@@ -38,7 +39,7 @@
 
    <div class="container mb-3">
       <h1 class="display-4 mb-3">List of our Dogs:</h1>
-      <table class="table table-info table-striped table-hover">
+      <table class="table table-dark table-striped table-hover">
          <thead>
             <tr class="text-center">
                <th scope="col">#</th>
