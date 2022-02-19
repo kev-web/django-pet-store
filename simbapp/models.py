@@ -13,3 +13,16 @@ class CodingPics(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
+class DogInfo(models.Model):
+    dog_name = models.CharField(max_length=50)
+    dog_age = models.IntegerField()
+    dog_owner = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name_plural = 'Dog Info'
+
+    def __str__(self):
+        return self.dog_name

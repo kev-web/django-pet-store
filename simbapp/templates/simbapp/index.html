@@ -22,7 +22,7 @@
       <p class="lead">We are using Bootstrap 5 to design our frontend app.</p>
    </div>
    
-   <div class="container">
+   <div class="container mb-3">
       <div class="row justify-content-center">
          {% for item in code_pics %}
             <div class="col-sm-3 mb-3 p-0">
@@ -34,6 +34,28 @@
             </div>
          {% endfor %}
       </div>
+   </div>
+
+   <div class="container mb-3">
+      <h1 class="display-4 mb-3">List of our Dogs:</h1>
+      <table class="table-info">
+         <thead>
+            <tr>
+               <th scope="col">#</th>
+               <th scope="col">Name</th>
+               <th scope="col">Age</th>
+               <th scope="col">Owner</th>
+            </tr>
+         </thead>
+         <tbody>
+            {% for item in dogs %}
+               <th scope="row">{{ item.id }}</th>
+               <th scope="row">{{ item.dog_name }}</th>
+               <th scope="row">{{ item.dog_age }}</th>
+               <th scope="row">{{ item.dog_owner }}</th>
+            {% endfor %}
+         </tbody>
+      </table>
    </div>
 
 {% endblock %}

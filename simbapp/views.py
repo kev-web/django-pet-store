@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from . models import CodingPics
+from . models import CodingPics, DogInfo
 
 
 # Create your views here.
@@ -8,9 +8,11 @@ from . models import CodingPics
 
 def homeView(request):
     code_pics = CodingPics.objects.all()
+    dogs = DogInfo.objects.all()
 
     context = {
-        'code_pics' : code_pics, 
+        'code_pics' : code_pics,
+        'dogs': dogs 
     }
 
     return render(request, 'simbapp/index.html', context)
