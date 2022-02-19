@@ -1,7 +1,7 @@
 #PETSTORE - testing ignoring some folders that are used only in development, and if pushed it will override the folder in production:
 
 # migrations/
-media/
+# media/
 
 #----------------------------------------------------
 
