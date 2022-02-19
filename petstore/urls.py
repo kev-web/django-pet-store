@@ -24,7 +24,7 @@ from django.urls import path, include
 # from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin-kev-main/', admin.site.urls),
+    path('admin-kev-main-3005!/', admin.site.urls),
     path('', include('simbapp.urls')),
 ]
 
