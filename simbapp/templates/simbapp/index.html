@@ -38,9 +38,9 @@
 
    <div class="container mb-3">
       <h1 class="display-4 mb-3">List of our Dogs:</h1>
-      <table class="table table-info">
+      <table class="table table-info table-striped table-hover">
          <thead>
-            <tr>
+            <tr class="text-center">
                <th scope="col">#</th>
                <th scope="col">Name</th>
                <th scope="col">Age</th>
@@ -49,13 +49,16 @@
          </thead>
          <tbody>
             {% for item in dogs %}
+            <tr class="text-center">
                <th scope="row">{{ item.id }}</th>
                <td scope="row">{{ item.dog_name }}</td>
                <td scope="row">{{ item.dog_age }}</td>
                <td scope="row">{{ item.dog_owner }}</td>
+            </tr>
             {% endfor %}
          </tbody>
       </table>
    </div>
 
+  
 {% endblock %}
