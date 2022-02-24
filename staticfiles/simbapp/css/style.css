@@ -1,0 +1,11 @@
+*{
+    font-family: 'Consolas', Arial, sans-serif;
+}
+
+.navbar-brand, .nav-link{
+    font-size: 18px;
+}
+
+.baseDiv{
+    height: 800px;
+}
